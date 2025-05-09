@@ -48,7 +48,7 @@ namespace TodoPomodoro.Domain.Entities
             };
         }
 
-        public void Start()
+        public void Iniciar()
         {
             if (Status == PomodoroStatus.Finalizado)
                 throw new RegraNegocioException("O Pomodoro já foi finalizado.");
@@ -57,7 +57,7 @@ namespace TodoPomodoro.Domain.Entities
             StartDate = DateTime.UtcNow;
         }
 
-        public void Pause()
+        public void Pausar()
         {
             if (Status != PomodoroStatus.EmExecucao)
                 throw new RegraNegocioException("O Pomodoro só pode ser pausado se estiver em execução.");
@@ -65,7 +65,7 @@ namespace TodoPomodoro.Domain.Entities
             Status = PomodoroStatus.Pausado;
         }
 
-        public void Resume()
+        public void Finalizar()
         {
             if (Status != PomodoroStatus.Pausado)
                 throw new RegraNegocioException("O Pomodoro só pode ser retomado se estiver pausado.");
@@ -73,7 +73,7 @@ namespace TodoPomodoro.Domain.Entities
             Status = PomodoroStatus.EmExecucao;
         }
 
-        public void FinalizeCycle()
+        public void FinalizarCycle()
         {
             if (Status != PomodoroStatus.EmExecucao && Status != PomodoroStatus.Pausado)
                 throw new RegraNegocioException("O ciclo só pode ser finalizado se estiver em execução ou pausado.");
@@ -91,7 +91,7 @@ namespace TodoPomodoro.Domain.Entities
             }
         }
 
-        public void Reset()
+        public void Reiniciar()
         {
             CurrentCycle = 0;
             Status = PomodoroStatus.NaoIniciado;
