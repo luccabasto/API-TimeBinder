@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace TimeBinder.Domain.Enums
 {
-    public enum TaskStatus
+    public enum TaskProgressStatus
     {
         NaoIniciado,
         EmAndamento,
         Pausado,
-       // Interrompido, validar se faz sentido
         Concluido,
+       /* Interrompido, validar se faz sentido */
     }
 }
