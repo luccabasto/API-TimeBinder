@@ -40,7 +40,7 @@ TodoPomodoro/
 │   │   ├── Task/
 │   │   └── Pomodoro/
 │   ├── Interfaces/
-│   ├── Validators/
+│   ├── Validators/ ??
 │   └── Mappers/
 ├── TodoPomodoro.API/
 │   ├── Controllers/
@@ -48,7 +48,7 @@ TodoPomodoro/
 │   │   ├── Request/
 │   │   └── Response/
 │   ├── Mappers/
-│   └── Middleware/
+│   └── Middleware/ ??
 ├── TodoPomodoro.Infrastructure/
 │   ├── Contexts/
 │   ├── Repositories/
