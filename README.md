@@ -17,21 +17,53 @@ Oferecer uma aplicação backend robusta e modular que permita:
 
 ## 🧱 Estrutura do Projeto (DDD)
 ```
+
 TodoPomodoro/
-├── TodoPomodoro.API/                  # Controllers e camada de apresentação
-├── TodoPomodoro.Application/         # Casos de uso e regras de aplicação
-│   ├── Interfaces/
-│   └── Services/
-├── TodoPomodoro.Domain/              # Entidades, interfaces e lógica de domínio
+├── TodoPomodoro.Domain/
 │   ├── Entities/
+│   │   ├── ToDo.cs
+│   │   ├── Task.cs
+│   │   └── Pomodoro.cs
 │   ├── Enums/
+│   │   ├── ToDoStatus.cs
+│   │   ├── TaskProgressStatus.cs
+│   │   └── PomodoroStatus.cs
 │   ├── Interfaces/
-│   └── ValueObjects/
-├── TodoPomodoro.Infrastructure/      # Repositórios, contextos e integração com MongoDB
-│   ├── Configurations/
+│   │   ├── IToDoRepository.cs
+│   │   ├── ITaskRepository.cs
+│   │   └── IPomodoroRepository.cs
+│   └── Exceptions/
+│       └── BusinessRuleException.cs
+├── TodoPomodoro.Application/
+│   ├── UseCases/
+│   │   ├── ToDo/
+│   │   ├── Task/
+│   │   └── Pomodoro/
+│   ├── Interfaces/
+│   ├── Validators/
+│   └── Mappers/
+├── TodoPomodoro.API/
+│   ├── Controllers/
+│   ├── DTOs/
+│   │   ├── Request/
+│   │   └── Response/
+│   ├── Mappers/
+│   └── Middleware/
+├── TodoPomodoro.Infrastructure/
 │   ├── Contexts/
-│   └── Repositories/
-├── TodoPomodoro.Shared/              # Helpers, constantes e configs globais
+│   ├── Repositories/
+│   ├── Services/
+│   └── Configurations/
+└── TodoPomodoro.Tests/
+    ├── Domain/
+    │   └── TaskTests.cs
+    ├── Application/
+    │   └── FinalizarTaskServiceTests.cs
+    ├── Infrastructure/
+    │   └── TaskRepositoryTests.cs
+    └── API/
+        └── ToDoControllerTests.cs
+
 ```
 
 ---
