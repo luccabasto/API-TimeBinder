@@ -1,0 +1,6 @@
+@TimeBinder.WebAPI_HostAddress = http://localhost:5047
+
+GET {{TimeBinder.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

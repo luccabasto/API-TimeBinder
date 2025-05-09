@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "TimeBinder.WebAPI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:60222;http://localhost:60223"
+    }
+  }
+}
