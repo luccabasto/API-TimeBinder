@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 using TimeBinder.Domain.Entities;
 using TimeBinder.Domain.Interfaces;
 using TimeBinder.Infrastructure.MongoDB.Contexts;
