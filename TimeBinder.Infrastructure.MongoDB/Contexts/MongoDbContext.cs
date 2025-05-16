@@ -1,10 +1,9 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using TimeBinder.Infrastructure.MongoDB.Configurations;
-using TimeBinder.Domain.Entity;
 using TimeBinder.Domain.Entities;
 
-namespace TimeBinder.Infrastructure.Contexts
+namespace TimeBinder.Infrastructure.MongoDB.Contexts
 {
     public class MongoDbContext
     {

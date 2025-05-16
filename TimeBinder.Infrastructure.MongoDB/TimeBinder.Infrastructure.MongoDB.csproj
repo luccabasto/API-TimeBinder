@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TimeBinder.Application\TimeBinder.Application.csproj" />
     <ProjectReference Include="..\TimeBinder.Domain\TimeBinder.Domain.csproj" />
   </ItemGroup>
 
