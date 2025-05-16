@@ -20,19 +20,19 @@ namespace TimeBinder.Domain.Entity
 
         public List<Task> Tasks { get; set; } = new List<Task>();
 
-        public void MarkAsCompleted()
+        public void MarcarComoConcluido()
         {
             Status = ToDoStatus.Concluido;
             FinishAt = DateTime.UtcNow;
         }
 
-        public void MarkAsInProgress()
+        public void MarcarEmProgresso()
         {
             if (Status == ToDoStatus.NaoIniciado)
                 Status = ToDoStatus.EmAndamento;
         }
 
-        public void AddTask(Task task)
+        public void AdicionarTask(Task task)
         {
             if (task == null)
                 throw new ArgumentNullException(nameof(task));
