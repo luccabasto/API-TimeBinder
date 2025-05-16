@@ -18,8 +18,12 @@ Oferecer uma aplicação backend robusta e modular que permita:
 ## 🧱 Estrutura do Projeto (DDD)
 ```
 
-TodoPomodoro/
-├── TodoPomodoro.Domain/
+TimeBinder/
+├── TimeBinder.sln
+├── docker-compose.yml
+├── .dockerignore
+│
+├── TimeBinder.Domain/
 │   ├── Entities/
 │   │   ├── ToDo.cs
 │   │   ├── Task.cs
@@ -34,27 +38,65 @@ TodoPomodoro/
 │   │   └── IPomodoroRepository.cs
 │   └── Exceptions/
 │       └── BusinessRuleException.cs
-├── TodoPomodoro.Application/
+│
+├── TimeBinder.Application/
 │   ├── UseCases/
 │   │   ├── ToDo/
+│   │   │   ├── CriarToDoService.cs
+│   │   │   └── (outros serviços ToDo)
 │   │   ├── Task/
+│   │   │   ├── CriarTaskService.cs
+│   │   │   └── (outros serviços Task)
 │   │   └── Pomodoro/
+│   │       ├── CriarPomodoroService.cs
+│   │       └── (outros serviços Pomodoro)
 │   ├── Interfaces/
-│   ├── Validators/ ??
+│   │   ├── INotificationService.cs
+│   │   └── ITimeService.cs
+│   ├
+│   │
 │   └── Mappers/
-├── TodoPomodoro.API/
+│       └── (mapeamentos internos)
+│
+├── TimeBinder.Infrastructure/
+│   ├── Configurations/
+│   │   └── MongoConfiguration.cs
+│   ├── Contexts/
+│   │   └── MongoDbContext.cs
+│   ├── Repositories/
+│   │   ├── ToDoRepository.cs
+│   │   ├── TaskRepository.cs
+│   │   └── PomodoroRepository.cs
+│   └── Services/
+│       ├── NotificationService.cs
+│       └── TimeService.cs
+│
+├── TimeBinder.API/
 │   ├── Controllers/
+│   │   ├── ToDoController.cs
+│   │   ├── TaskController.cs
+│   │   └── PomodoroController.cs
 │   ├── DTOs/
 │   │   ├── Request/
+│   │   │   ├── CreateToDoRequest.cs
+│   │   │   ├── CreateTaskRequest.cs
+│   │   │   └── CreatePomodoroRequest.cs
 │   │   └── Response/
+│   │       ├── ToDoResponse.cs
+│   │       ├── TaskResponse.cs
+│   │       └── PomodoroResponse.cs
 │   ├── Mappers/
-│   └── Middleware/ ??
-├── TodoPomodoro.Infrastructure/
-│   ├── Contexts/
-│   ├── Repositories/
-│   ├── Services/
-│   └── Configurations/
-└── TodoPomodoro.Tests/
+│   │   └── DtoToEntityMapper.cs
+│   ├── Middleware/
+│   │   └── ExceptionHandlingMiddleware.cs
+│   ├── Program.cs
+│   ├── appsettings.json
+│   ├── appsettings.Development.json
+│   └── Properties/
+│       └── launchSettings.json
+│   └── Dockerfile
+│
+└── TimeBinder.Tests/
     ├── Domain/
     │   └── TaskTests.cs
     ├── Application/
@@ -63,6 +105,7 @@ TodoPomodoro/
     │   └── TaskRepositoryTests.cs
     └── API/
         └── ToDoControllerTests.cs
+
 
 ```
 
