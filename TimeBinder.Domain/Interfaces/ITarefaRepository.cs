@@ -5,15 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using TimeBinder.Domain.Entities;
 
-
 namespace TimeBinder.Domain.Interfaces
 {
-    public interface IToDoRepository
+    public interface ITarefaRepository
     {
-        Task<ToDo> GetByIdAsync(Guid id);
-        Task<List<ToDo>> GetAllAsync();
-        Task AddAsync(ToDo toDo);
-        Task UpdateAsync(ToDo toDo);
+        Task<Tarefa> GetByIdAsync(Guid id);
+        Task<List<Tarefa>> GetByToDoIdAsync(Guid toDoId);
+        Task AddAsync(Tarefa tarefa);
+        Task UpdateAsync(Tarefa tarefa);
         Task DeleteAsync(Guid id);
     }
 }

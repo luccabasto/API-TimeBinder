@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using TimeBinder.Domain.Enums;
 using TimeBinder.Domain.Execptions;
 
-namespace TimeBinder.Domain.Entity
+namespace TimeBinder.Domain.Entities
 {
    public class ToDo
     {
