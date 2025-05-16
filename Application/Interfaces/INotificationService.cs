@@ -1,4 +1,5 @@
-﻿namespace TimeBinder.Application.Interfaces
+﻿
+namespace TimeBinder.Application.Interfaces
 {
     public interface INotificationService
     {

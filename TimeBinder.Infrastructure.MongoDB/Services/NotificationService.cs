@@ -1,4 +1,5 @@
-﻿using TimeBinder.Application.Interfaces;
+﻿
+using TimeBinder.Application.Interfaces;
 
 namespace TimeBinder.Infrastructure.MongoDB.Services
 {
