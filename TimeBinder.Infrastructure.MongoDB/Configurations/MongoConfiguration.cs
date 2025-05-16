@@ -8,6 +8,8 @@ namespace TimeBinder.Infrastructure.MongoDB.Configurations
 {
     public class MongoConfiguration
     {
-        public string ConnectionString { get; set; } = null;
+        public string ConnectionString { get; set; } =  string.Empty;
+
+        public string DatabaseName { get; set; } = string.Empty; 
     }
 }

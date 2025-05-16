@@ -1,9 +1,8 @@
 ﻿using System;
 using TimeBinder.Domain.Enums;
-using TimeBinder.Domain.Enums;
 using TimeBinder.Domain.Execptions;
 
-namespace TodoPomodoro.Domain.Entities
+namespace TimeBinder.Domain.Entities
 {
     public class Pomodoro
     {
