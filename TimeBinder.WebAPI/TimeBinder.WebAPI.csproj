@@ -10,4 +10,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TimeBinder.Infrastructure.MongoDB\TimeBinder.Infrastructure.MongoDB.csproj" />
+  </ItemGroup>
+
 </Project>

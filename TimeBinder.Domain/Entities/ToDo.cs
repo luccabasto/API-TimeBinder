@@ -10,6 +10,12 @@ namespace TimeBinder.Domain.Entities
 {
    public class ToDo
     {
+        public ToDo(string title, string description)
+        {
+            Title = title;
+            Description = description;
+        }
+
         public Guid Id { get; set; }
         public string Title { get; set; } = null;
         public string Description { get; set; } = null;
